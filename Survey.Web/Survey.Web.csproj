@@ -231,15 +231,15 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Survey.App\Survey.App.csproj">
+    <ProjectReference Include="..\Survey.App\Survey.App.csproj">
       <Project>{0ee51f8b-b7da-45f9-9366-2254a5ae3fbe}</Project>
       <Name>Survey.App</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Survey.Core\Survey.Core.csproj">
+    <ProjectReference Include="..\Survey.Core\Survey.Core.csproj">
       <Project>{e749c55e-6659-49a5-9a14-f42187b800c6}</Project>
       <Name>Survey.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Survey.Repository.SqlServer\Survey.Repository.SqlServer.csproj">
+    <ProjectReference Include="..\Survey.Repository.SqlServer\Survey.Repository.SqlServer.csproj">
       <Project>{615aea30-bc36-4a1f-9d71-8610f097a453}</Project>
       <Name>Survey.Repository.SqlServer</Name>
     </ProjectReference>

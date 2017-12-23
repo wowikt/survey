@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Web", "Survey.Web\Survey.Web.csproj", "{BFD80CA4-AC50-4D5A-AF01-F1326237288E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Core", "..\Survey.Core\Survey.Core.csproj", "{E749C55E-6659-49A5-9A14-F42187B800C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Core", "Survey.Core\Survey.Core.csproj", "{E749C55E-6659-49A5-9A14-F42187B800C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.App", "..\Survey.App\Survey.App.csproj", "{0EE51F8B-B7DA-45F9-9366-2254A5AE3FBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.App", "Survey.App\Survey.App.csproj", "{0EE51F8B-B7DA-45F9-9366-2254A5AE3FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Repository.SqlServer", "..\Survey.Repository.SqlServer\Survey.Repository.SqlServer.csproj", "{615AEA30-BC36-4A1F-9D71-8610F097A453}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Repository.SqlServer", "Survey.Repository.SqlServer\Survey.Repository.SqlServer.csproj", "{615AEA30-BC36-4A1F-9D71-8610F097A453}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
