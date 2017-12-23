@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{615AEA30-BC36-4A1F-9D71-8610F097A453}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Survey.Repository.SqlServer</RootNamespace>
+    <AssemblyName>Survey.Repository.SqlServer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\Survey.Web\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\Survey.Web\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Survey.Web\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Survey.Web\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\SqlServerAutofacConfig.cs" />
+    <Compile Include="Migrations\201712211313187_Initial.cs" />
+    <Compile Include="Migrations\201712211313187_Initial.Designer.cs">
+      <DependentUpon>201712211313187_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712211325006_FinishedSurveysAdded.cs" />
+    <Compile Include="Migrations\201712211325006_FinishedSurveysAdded.Designer.cs">
+      <DependentUpon>201712211325006_FinishedSurveysAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712221430289_AddedSurveyPlanDescription.cs" />
+    <Compile Include="Migrations\201712221430289_AddedSurveyPlanDescription.Designer.cs">
+      <DependentUpon>201712221430289_AddedSurveyPlanDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712231134459_FinishedSurveyAnswerUpdated.cs" />
+    <Compile Include="Migrations\201712231134459_FinishedSurveyAnswerUpdated.Designer.cs">
+      <DependentUpon>201712231134459_FinishedSurveyAnswerUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712231148125_DbContextFix.cs" />
+    <Compile Include="Migrations\201712231148125_DbContextFix.Designer.cs">
+      <DependentUpon>201712231148125_DbContextFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\FinishedSurveyRepository.cs" />
+    <Compile Include="Repositories\SurveyPlanRepository.cs" />
+    <Compile Include="SqlServerSurveyContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Survey.Core\Survey.Core.csproj">
+      <Project>{e749c55e-6659-49a5-9a14-f42187b800c6}</Project>
+      <Name>Survey.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712211313187_Initial.resx">
+      <DependentUpon>201712211313187_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712211325006_FinishedSurveysAdded.resx">
+      <DependentUpon>201712211325006_FinishedSurveysAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712221430289_AddedSurveyPlanDescription.resx">
+      <DependentUpon>201712221430289_AddedSurveyPlanDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712231134459_FinishedSurveyAnswerUpdated.resx">
+      <DependentUpon>201712231134459_FinishedSurveyAnswerUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712231148125_DbContextFix.resx">
+      <DependentUpon>201712231148125_DbContextFix.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

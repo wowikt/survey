@@ -1,0 +1,31 @@
+﻿@model Survey.Web.Models.FinishedSurveyViewModel
+
+@{
+    /**/
+
+    ViewBag.Title = "Оконченный опрос";
+}
+
+<div class="jumbotron">
+    <h1>Оконченный опрос</h1>
+    <p class="lead">Ваши ответы на вопросы:</p>
+</div>
+
+<p>Дата опроса: @Model.DateCreated</p>
+
+@foreach (var question in Model.Questions)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2>@question.Text</h2>
+
+            @foreach (var answer in question.Answers)
+            {
+                <p>@answer.AnswerText</p>
+            }
+        </div>
+    </div>
+}
+
+<p><a class="btn btn-default" href="@Url.Action("Index", "Home")">В начало</a></p>
+

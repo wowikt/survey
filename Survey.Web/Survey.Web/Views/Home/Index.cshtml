@@ -1,0 +1,24 @@
+﻿@using Survey.Web.Models
+@model IList<SurveyPlanViewModel>
+
+@{
+    ViewBag.Title = "Начальная страница";
+}
+
+<div class="jumbotron">
+    <h1>Опросник</h1>
+    <p class="lead">Выберите опрос из списка:</p>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@item.Name</h2>
+            <p>
+                @item.Description
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("ViewSurvey", "Home", new { id = item.Id })">Начать</a></p>
+        </div>
+    }
+</div>
